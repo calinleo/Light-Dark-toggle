@@ -1,0 +1,188 @@
+:root {
+  --background-color: #ffffff;
+  --text-color: #000000;
+  --card-background: #f5f5f5;
+  --card-border-color: #e0e0e0;
+  --button-background: #6200ea;
+  --button-background-hover: #bb86fc;
+  --button-text-color: #ffffff;
+}
+
+[data-theme="dark"] {
+  --background-color: #121212;
+  --text-color: #ffffff;
+  --card-background: #1e1e1e;
+  --card-border-color: #333333;
+  --button-background: #bb86fc;
+  --button-background-hover: #6200ea;
+  --button-text-color: #000000;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: Arial, sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+  margin: 0;
+  padding: 20px;
+}
+
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.card {
+  background-color: var(--card-background);
+  border: 1px solid var(--card-border-color);
+  border-radius: 8px;
+  padding: 20px;
+  margin: 10px;
+  width: 100%;
+  max-width: 300px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.card h2 {
+  margin-top: 0;
+}
+
+.card p {
+  font-size: 24px;
+  margin: 10px 0;
+}
+
+.card ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.card ul li {
+  margin: 10px 0;
+}
+
+.card button {
+  background-color: var(--button-background);
+  color: var(--button-text-color);
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.card button:hover {
+  background-color: var(
+    --button-background-hover,
+    darken(var(--button-background), 10%)
+  );
+}
+
+/* Toggle switch styling */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  margin-right: 10px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: var(--button-background);
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+.txt-center {
+  text-align: center;
+}
+
+/* Base styling for the code block */
+.json-code {
+  background-color: #282c34; /* Dark background */
+  color: #abb2bf; /* Default text color */
+  padding: 16px;
+  border-radius: 8px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 14px;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  width: 400px;
+}
+
+/* Highlight keys */
+.json-code .json-key {
+  color: #61afef; /* Blue for keys */
+}
+
+/* Highlight strings */
+.json-code .json-string {
+  color: #98c379; /* Green for strings */
+}
+
+/* Highlight braces, brackets, and commas */
+.json-code .json-brace,
+.json-code .json-bracket,
+.json-code .json-comma {
+  color: #abb2bf; /* Default color for braces, brackets, and commas */
+}
+
+/* Responsive Styles */
+@media (min-width: 768px) {
+  .membership-cards {
+    flex-direction: row;
+  }
+}
+
+@media (max-width: 767px) {
+  .card {
+    flex: 1 1 100%;
+  }
+}

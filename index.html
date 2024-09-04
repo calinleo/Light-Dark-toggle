@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Membership Cards with Light/Dark Mode | Design system tokens | CSS
+      Variables
+    </title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="theme-toggle">
+      <label class="switch">
+        <input type="checkbox" id="mode-toggle" />
+        <span class="slider"></span>
+      </label>
+      <span>Toggle Dark Mode</span>
+    </div>
+
+    <div class="container">
+      <div class="card">
+        <h2>Free Membership</h2>
+        <p>$0/month</p>
+        <ul>
+          <li>Basic Access</li>
+          <li>5 GB Storage</li>
+          <li>Email Support</li>
+        </ul>
+        <button>Sign Up</button>
+      </div>
+
+      <div class="card">
+        <h2>Standard Membership</h2>
+        <p>$15/month</p>
+        <ul>
+          <li>Priority Access</li>
+          <li>50 GB Storage</li>
+          <li>Priority Support</li>
+        </ul>
+        <button>Sign Up</button>
+      </div>
+
+      <div class="card">
+        <h2>Premium Membership</h2>
+        <p>$25/month</p>
+        <ul>
+          <li>Unlimited Access</li>
+          <li>200 GB Storage</li>
+          <li>24/7 Support</li>
+        </ul>
+        <button>Sign Up</button>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="mt-20 txt-center">
+        Design tokens are variables that represent design decisions, such as
+        colors, typography, spacing, and shadows. <br />
+        They provide a single source of truth for your design system, making it
+        easier to maintain consistency and make changes. <br />
+        Example of design tokens in JSON format:
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="json-code mt-20">
+        <span class="json-brace">{</span><br />
+        <span class="json-key">"colors"</span>: <span class="json-brace">{</span
+        ><br />
+        &nbsp;<span class="json-key">"primary"</span>:<span class="json-string"
+          >"#6200ea"</span
+        >, <br />
+        &nbsp;<span class="json-key">"secondary"</span>:<span
+          class="json-string"
+          >"#bb86fc"</span
+        >, <br />
+        &nbsp;<span class="json-key">"success"</span>:<span class="json-string"
+          >"#28a745"</span
+        >, <br />
+        &nbsp;<span class="json-key">"danger"</span>:<span class="json-string"
+          >"#dc3545"</span
+        >
+        <br />
+        &nbsp;<span class="json-brace">}</span><br />
+
+        <span class="json-key">"typography"</span>:<span class="json-brace"
+          >{</span
+        ><br />
+        &nbsp;<span class="json-key">"heading-font"</span>:<span
+          class="json-string"
+          >"Roboto, sans-serif"</span
+        >, <br />
+        &nbsp;<span class="json-key">"body-font"</span>:<span
+          class="json-string"
+          >"Open Sans, sans-serif"</span
+        >
+        &nbsp;<span class="json-brace">}</span><br />
+
+        <span class="json-key">"spacing"</span>:<span class="json-brace">{</span
+        ><br />
+        &nbsp;<span class="json-key">"small"</span>:<span class="json-string"
+          >"0.5rem"</span
+        >, <br />
+        &nbsp;<span class="json-key">"medium"</span>:<span class="json-string"
+          >"1rem"</span
+        >, <br />
+        &nbsp;<span class="json-key">"large"</span>:<span class="json-string"
+          >"2rem"</span
+        >
+
+        &nbsp;<span class="json-brace">}</span><br />
+
+        <span class="json-brace">}</span>
+      </div>
+    </div>
+    <div class="container">
+      <div class="mt-20 txt-center">
+        <div>
+          <h3>Best Practices for JSON Design Systems:</h3>
+        </div>
+        <ul style="text-align: left">
+          <li>
+            <strong>Consistency:</strong> Use a consistent naming convention for
+            tokens and components.
+          </li>
+          <li>
+            <strong>Modularity:</strong> Break down your design system into
+            smaller, reusable modules.
+          </li>
+          <li>
+            <strong>Version Control:</strong> Use a version control system to
+            track changes and collaborate effectively.
+          </li>
+          <li>
+            <strong>Automation:</strong> Automate as many tasks as possible to
+            improve efficiency.
+          </li>
+          <li>
+            <strong>Documentation:</strong> Provide clear documentation for your
+            design system to help others understand and use it.
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
